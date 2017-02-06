@@ -37,7 +37,6 @@
   },
   "devDependencies": {
       "mocha-nightwatch": "^2.2.9",
-       "mocha": "^1.21.5",
     "nightwatch": "^0.8.6",
     "should": "^4.0.4"
   }
