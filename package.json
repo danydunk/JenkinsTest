@@ -1,4 +1,4 @@
-{
+ {
   "name": "wa-exercise-5-2014-2015",
   "version": "0.0.0",
   "description": "Exercise 5 of Web Atelier@inf.usi.ch. Express.js and Mongoose",
@@ -7,7 +7,7 @@
     "install": "chmod -R u+x ./bin/ && ./bin/installSeleniumAndChromeWebDriver",
     "start": "DEBUG='atelierbeats-server' ./bin/www",
     "test": "npm run test-mocha && npm start | node seed.js && ./nightwatch",
-      "test-mocha": "./node_modules/mocha/bin/mocha -R spec ./test/ex1 ./test/ex2 ./test/ex3 ./test/ex4 ./test/ex5",
+      "test-mocha": "MOCHA_FILE=./jenkins-test-results.xml ./node_modules/mocha/bin/mocha -R spec ./test/ex1 ./test/ex2 ./test/ex3 ./test/ex4 ./test/ex5 --reporter mocha-junit-reporter",
       "test-nightwatch": "node seed.js && ./nightwatch"
       , "stop": "pkill \"myapp\""
   },
