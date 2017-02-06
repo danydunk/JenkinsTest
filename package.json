@@ -7,7 +7,7 @@
     "install": "chmod -R u+x ./bin/ && ./bin/installSeleniumAndChromeWebDriver",
     "start": "DEBUG='atelierbeats-server' ./bin/www",
     "test": "npm run test-mocha && npm start | node seed.js && ./nightwatch",
-      "test-mocha": "MOCHA_FILE=./jenkins-test-results.xml ./node_modules/mocha/bin/mocha -R spec ./test/ex1 ./test/ex2 ./test/ex3 ./test/ex4 ./test/ex5 --reporter mocha-junit-reporter",
+      "test-mocha": "JUNIT_REPORT_PATH=./jenkins-test-results.xml ./node_modules/mocha/bin/mocha -R spec ./test/ex1 ./test/ex2 ./test/ex3 ./test/ex4 ./test/ex5 --reporter mocha-jenkins-reporter",
       "test-nightwatch": "node seed.js && ./nightwatch"
       , "stop": "pkill \"myapp\""
   },
@@ -39,5 +39,6 @@
       "mocha-nightwatch": "^2.2.9",
     "nightwatch": "^0.8.6",
     "should": "^4.0.4"
+    "mocha
   }
 }
