@@ -19,7 +19,7 @@ module.exports = {
       .assert.visible('input[name=genre]')
       .assert.visible('input[name=artwork]')
       .assert.visible('input[name=dateCreated]')
-      .assert.value("input[name=genre]", "Black MMetal")
+      .assert.value("input[name=genre]", "Black Metal")
       .end();
   }
 };
